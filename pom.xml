@@ -21,8 +21,14 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-web</artifactId>
+		    <exclusions>
+			<exclusion>
+			    <groupId>org.springframework.boot</groupId>
+			    <artifactId>spring-boot-starter-tomcat</artifactId>
+			</exclusion>
+		    </exclusions>   
 		</dependency>
 
 		<dependency>
@@ -45,6 +51,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>jenkins-demo</finalName>
 	</build>
 
 </project>
